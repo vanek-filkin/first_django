@@ -1,0 +1,18 @@
+{% if new_prod_list %}
+
+<ul>
+
+{% for product in new_prod_list %}
+
+<li><a href="{% url 'products:detail' product.id %}">{{ product }}</a></li>
+
+{% endfor %}
+
+</ul>
+
+{% else %}
+<p>No products are available.</p>
+
+{% endif %}
+
+<H1><a href="{% url 'products:add_new'%}">Добавить Товар</a><h1>

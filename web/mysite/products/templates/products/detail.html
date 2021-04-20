@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html>
+
+<meta charset="UTF-8">
+
+<body>
+
+<p>{{product}}</p>
+{% if error_message %}
+<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'products:delete' product.id%}" method="post">
+    {% csrf_token %}
+<input type="button" value="delete">
+</form>
+
+
+</body>
+
+</html>
