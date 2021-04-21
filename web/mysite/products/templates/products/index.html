@@ -15,4 +15,7 @@
 
 {% endif %}
 
-<H1><a href="{% url 'products:add_new'%}">Добавить Товар</a><h1>
+<form action="{% url 'products:add_new'%}" method="post">
+    {% csrf_token %}
+    <input type="submit" name="add_new" value="Добавить товар" />
+  </form>

@@ -1,1 +1,10 @@
-<h1>НОВЫЙ ТОВАР<h1>
+<form action="{% url 'products:add_new'}" method="post">
+			Название: <input type = "text"  name = "name" > <br> <br>
+			Категория: <input type = "text" name = "category" > <br> <br>
+			Производитель: <input type = "text" name = "manufacturer"> <br> <br>
+			Страна: <input type = "text" name = " country" > <br> <br>
+			Описание: <input type = "text" name = "description" > <br> <br>
+			Цена: <input type = "text" name = " price" > <br> <br>
+			Дата выпуска: <input type = "text" name = "rel_date"> <br> <br>
+			<input type = "submit" name = "submit" value = "отправить">
+</form>
