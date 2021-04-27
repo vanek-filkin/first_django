@@ -1,10 +1,24 @@
-<form action="{% url 'products:add_new'}" method="post">
-			Название: <input type = "text"  name = "name" > <br> <br>
-			Категория: <input type = "text" name = "category" > <br> <br>
-			Производитель: <input type = "text" name = "manufacturer"> <br> <br>
-			Страна: <input type = "text" name = " country" > <br> <br>
-			Описание: <input type = "text" name = "description" > <br> <br>
-			Цена: <input type = "text" name = " price" > <br> <br>
-			Дата выпуска: <input type = "text" name = "rel_date"> <br> <br>
-			<input type = "submit" name = "submit" value = "отправить">
-</form>
+{% extends "products/base.html" %}
+{%block title %}
+    Добавить Товар
+{% endblock %}
+{%block name%}
+    Добавление
+{% endblock %}
+{% block content %}
+<div class = forms>
+    <form action="{% url 'products:add_new' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+			<input type = "text"  name = "name" placeholder="Название" > <br>
+			<input type = "text" name = "category" placeholder="Категория" > <br>
+			<input type = "text" name = "manufacturer" placeholder="Производитель"> <br>
+			<input type = "text" name = "country" placeholder="Страна" > <br>
+			<textarea id = des type = "text" name = "description"  placeholder="Описание" ></textarea> <br>
+			<input type = "text" name = "price" placeholder="Цена" > <br>
+			<input type = "date" name = "rel_date" placeholder="Дата в формате yyyy-mm-dd"> <br>
+			<input type="file" name="photo" id="file" class="inputfile" />
+            <label for="file">Выберите файл</label><br><br>
+			<input type = "submit" name = "submit" value = "Отправить">
+    </form>
+</div>
+{% endblock %}

@@ -1,21 +1,44 @@
-{% if new_prod_list %}
+{% extends "products/base.html" %}
+{%block title %}
+    Товары
+{% endblock %}
 
-<ul>
+{%block name%}
+    Список Товаров
+{% endblock %}
 
-{% for product in new_prod_list %}
+{% block content %}
 
-<li><a href="{% url 'products:detail' product.id %}">{{ product }}</a></li>
+    {% if new_prod_list %}
 
-{% endfor %}
+        <ul>
+        {% for product in new_prod_list %}
+        <div class = conbox>
+            <div class = image_box)>
+                <img src="{{product.img.url}}" width = 200px height = auto />
+            </div>
+            <div class = name>
+                <a href="{% url 'products:detail' product.id %}">{{product.name}}</a>
+            </div>
+            <div class = price>
+                {{product.price}}₽
+            </div>
+        </div>
 
-</ul>
+        {% endfor %}
+        </ul>
 
-{% else %}
-<p>No products are available.</p>
+    {% else %}
 
-{% endif %}
+        <p>No products are available.</p>
 
-<form action="{% url 'products:add_new'%}" method="post">
-    {% csrf_token %}
-    <input type="submit" name="add_new" value="Добавить товар" />
-  </form>
+    {% endif %}
+
+{% endblock %}
+
+{% block button %}
+<form action="{% url 'products:add_new'%}" method="get">
+        {% csrf_token %}
+            <input type="submit" name="add_new" value="Добавить товар" />
+    </form>
+{% endblock %}

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang = "ru">
+    <meta charset = "UTF-8">
+
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'products/style.css' %}">
+
+<head>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <div class = mainname>
+        {% block name %}{% endblock %}
+    </div>
+    <div class = maincon>
+        {% block content %}{% endblock %}
+    </div>
+    <div class = button>
+        {% block button %}{% endblock %}
+    </div>
+</body>
+</html>

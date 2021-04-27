@@ -1,17 +1,57 @@
-<!DOCTYPE html>
+{% extends "products/base.html" %}
 
-<html>
+{%block title%}
+    Подробно
+{%endblock%}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static '../products/style.css' %}">
+{%block name%}
+    Подробно
+{%endblock%}
 
-<meta charset="UTF-8">
-
-<body>
-
-<p>{{product}}</p>
+{%block content%}
+<div id = prod>
+    {{product.name}}
+</div>
+<div class=det_inf>
+    <div class=left_img >
+        <img id = img src="{{product.img.url}}" width = 100% height = auto />
+    </div>
+    <div class = info_text>
+        <center>Описание:</center><br>
+        {{product.description}}
+    </div>
+     <div id = mon>
+         <center>Производитель:</center><br>
+         <center>{{product.manufacturer}}</center>
+    </div>
+     <div id = country>
+         <center>Страна:</center><br>
+         <center>{{product.country}}</center>
+    </div>
+    <div id = category>
+        <center>Категория:</center><br>
+         <center>{{product.type_of}}</center>
+    </div>
+     <div id = rel>
+         <center>Дата выпуска:</center><br>
+        <center>{{product.rel_date.year}}</center>
+    </div>
+     <div id = price>
+         <center>Цена:</center><br>
+       <center> {{product.price}}₽</center>
+    </div>
+</div>
 {% if error_message %}
-<p><strong>{{ error_message }}</strong></p>{% endif %}
 
-<form action="{% url 'products:delete' product.id%}" method="post">
-    {% csrf_token %}
-    <input type="submit" name="delete" value="Удалить" />
-  </form>
-</html>
+<p><strong>{{ error_message }}</strong></p>
+
+{% endif %}
+{%endblock%}
+{%block button%}
+    <form action="{% url 'products:delete' product.id%}" method="post">
+        {% csrf_token %}
+        <input type="submit" name="delete" value="Удалить" />
+    </form>
+
+{%endblock%}

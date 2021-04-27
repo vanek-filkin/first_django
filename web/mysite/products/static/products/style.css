@@ -1,0 +1,207 @@
+body {
+background: url(../images/back.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
+
+font-size: small;
+
+}
+
+h1 {
+
+color: #400;
+
+}
+
+.mainname{
+color:white;
+font-size:100px;
+text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+text-align: center
+
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+.maincon {
+            position: inherit;
+            margin: 0 auto;
+            max-width:1200px;
+            max-height:500px;
+            overflow: auto;
+        }
+.button{
+            position: inherit;
+            margin: 0 auto;
+            margin-top:25px;
+            max-width:200px;
+            overflow: auto;
+}
+.conbox{
+    position: inherit;
+    display:inline-block;
+    width:200px;
+    height:210px;
+    overflow: auto;
+    margin-left:40px;
+    margin-right:40px;
+    margin-top:40px;
+    padding-top:px;
+    background-color:rgba(255,255,255,0.8);
+    border-radius:20px;
+}
+a{
+    font-size:15px;
+    color: #000 !important;
+    text-decoration: none
+}
+.name{
+    font-family:Arial Black;
+    background-color:#a3c8f0;
+    padding-left:10px;
+    padding-right:10px;
+}
+.price{
+    margin-left:100px;
+    font-size:20px;
+}
+input[type=submit] {
+  background-color: #0677cf;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  font-size:16px;
+  font-weight: bold;
+  line-height: 1.7;
+  width: 180px;
+  height:50px
+}
+input[type=submit]:hover {
+  background-color:#0693cd ;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  font-size:16px;
+  font-weight: bold;
+  line-height: 1.7;
+  width: 181px
+  height:51px
+
+}
+.inputfile {
+    width: 1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+.inputfile + label {
+  background-color: #0677cf;
+  border: 1px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  font-size:16px;
+  font-weight: bold;
+  line-height: 5;
+  padding-left:15px;
+  padding-right:15px;
+  padding-top:15px;
+  padding-bottom:15px;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background-color: #0693cd ;
+}
+.inputfile + label {
+    cursor: pointer;
+}
+.inputfile:focus + label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+input {
+    margin-top:6px;
+    padding-left 200px;
+	width: 300px;
+	font-size: 13px;
+	font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
+	padding: 6px 0 4px 10px;
+	border: 1px solid #cecece;
+	background: #F6F6f6;
+	border-radius: 8px;
+	font-weight:bold;
+}
+
+#des{
+    margin-top:6px;
+	width: 300px;
+	height:45px;
+	font-size: 13px;
+	padding: 6px 0 4px 10px;
+	border: 1px solid #cecece;
+	background: #F6F6f6;
+	border-radius: 8px;
+	font-weight:bold;
+}
+
+.forms{
+  margin-left:450px;
+}
+
+#prod{
+    color:white;
+    font-size:50px;
+    text-shadow: 4px 4px 0px rgba(0,0,0,0.2);
+    text-align: center
+}
+#img{
+    border-radius:10px;
+}
+.det_inf{
+    display: flex;
+    position:relative;
+    margin-top:20px;
+    width:100%;
+    background-color:rgba(255,255,255,0.5);
+    border-radius:10px;
+}
+.left_img{
+    position:relative;
+    display:flex;
+    width:32%;
+    height:100%;
+    background-color:rgba(255,255,255);
+    border-radius:10px;
+}
+.info_text{
+    position:relative;
+    display:inline-block;
+    width:30%;
+    font-size:16px;
+    margin-top:auto;
+    margin-bottom:auto;
+    margin-left:auto;
+}
+#price,#category,#country,#mon,#rel{
+    position:relative;
+    font-size:12px;
+    margin-top:auto;
+    margin-bottom:auto;
+    margin-left:auto;
+    margin-right:auto;
+    padding-left:3px;
+    padding-right:3px;
+    border: 2px solid #0677cf;
+    border-radius:10px;
+    background-color:#74b4e4;
+    font-weight: bold;
+}
