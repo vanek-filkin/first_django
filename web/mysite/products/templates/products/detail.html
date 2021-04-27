@@ -51,7 +51,7 @@
 {%block button%}
     <form action="{% url 'products:delete' product.id%}" method="post">
         {% csrf_token %}
-        <input type="submit" name="delete" value="Удалить" />
+        <input type="submit" name="delete" value="Удалить  " />
     </form>
 
 {%endblock%}

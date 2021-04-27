@@ -2,17 +2,27 @@ from django.shortcuts import render,get_object_or_404
 from .models import Product
 from django.http import HttpResponseRedirect
 from django.core.files.storage import FileSystemStorage
+from django.views.generic import ListView,DetailView
 
 # Create your
+class ProductList(ListView):
+    model = Product
+    template_name = "products/index.html"
+    def order_by_date(seld):
+        return Product.objects.order_by('-rel_date')
 
-def index(request):
-    new_prod_list = Product.objects.order_by('-rel_date')
-    context = {'new_prod_list': new_prod_list}
-    return render(request, 'products/index.html', context)
-
-def detail(request, prod_id):
-    product = get_object_or_404(Product, pk=prod_id)
-    return render(request, 'products/detail.html', {'product': product})
+# def index(request):
+#     new_prod_list = Product.objects.order_by('-rel_date')
+#     context = {'new_prod_list': new_prod_list}
+#     return render(request, 'products/index.html', context)
+class Show_detail(DetailView):
+    model = Product
+    template_name = "products/detail.html"
+    context_object_name = "product"
+    pk_url_kwarg = 'prod_id'
+# def detail(request, prod_id):
+#     product = get_object_or_404(Product, pk=prod_id)
+#     return render(request, 'products/detail.html', {'product': product})
 
 def add_new(request):
     if request.method == "POST":

@@ -9,10 +9,10 @@
 
 {% block content %}
 
-    {% if new_prod_list %}
+    {% if object_list %}
 
         <ul>
-        {% for product in new_prod_list %}
+        {% for product in object_list %}
         <div class = conbox>
             <div class = image_box)>
                 <img src="{{product.img.url}}" width = 200px height = auto />
@@ -39,6 +39,6 @@
 {% block button %}
 <form action="{% url 'products:add_new'%}" method="get">
         {% csrf_token %}
-            <input type="submit" name="add_new" value="Добавить товар" />
+            <input type="submit" name="add_new" value="Добавить товар  " />
     </form>
 {% endblock %}
