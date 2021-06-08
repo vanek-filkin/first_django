@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ui_module for_cdn="0" id="f2bc67cf-9561-4743-8e42-b7245459a400" kaizen_zone="54753977" name="SiteData" package="SiteData" required="0" responsible="Сергейчук О.В." responsible_uuid="5b799bac-73d3-4f9e-8cc1-118767b40e4f" version="1.00">
+
+  <description/>
+
+  <depends>
+    <module architecture="all" compiler="gcc/mingw/clang/apple-clang" id="636177e5-4d75-44fa-9173-977dc90ff111" name="Env" os="all"/>
+    <module architecture="all" compiler="gcc/mingw/clang/apple-clang" id="636177e5-4d75-44fa-9173-977dc90ff191" name="File" os="all"/>
+    <module architecture="all" compiler="gcc/mingw/clang/apple-clang" id="656177e2-4d75-42fa-9173-977dc90ff121" name="Browser" os="all"/>
+    <module architecture="all" compiler="gcc/mingw/clang/apple-clang" id="686f183d-0bcc-4732-b4e4-6016c2a67a0f" name="Types" os="all"/>
+    <module architecture="all" compiler="gcc/mingw/clang/apple-clang" id="af50caf5-f84b-4b81-a19c-6f6618372dbd" name="Controls-default-theme" os="all"/>
+    <module architecture="all" compiler="gcc/mingw/clang/apple-clang" id="f27abe12-19df-4c9f-b886-634bd20a0011" name="UI" os="all"/>
+    <module architecture="all" compiler="gcc/mingw/clang/apple-clang" id="f6fdf353-3ab3-4dbb-8671-01c2b418bf0a" name="Controls" os="all"/>
+    <module architecture="all" compiler="gcc/mingw/clang/apple-clang" id="4f09610b-d8c0-4e75-99b7-e733211c98df" name="Hint" os="all"/>
+    <module architecture="all" compiler="gcc/mingw/clang/apple-clang" id="b9a1f328-a3b5-493e-bfe1-51fa05355fab" name="Graphs" os="all"/>
+    <module architecture="all" compiler="gcc/mingw/clang/apple-clang" id="6fd87d74-4783-446b-abb3-95d74c5f579e" name="Graphs-default-theme" os="all"/>
+    <module architecture="all" compiler="gcc/mingw/clang/apple-clang" id="e28814ab-f075-49ac-b964-4adc2d30e23f" name="SiteEditorExternal" os="all"/>
+  </depends>
+
+  <load_after/>
+
+  <parameters/>
+
+  <resources/>
+
+  <preload/>
+
+</ui_module>

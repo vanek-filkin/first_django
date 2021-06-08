@@ -23,3 +23,6 @@ class Product(models.Model):
 
     def was_release_recently(self):
         return self.rel_date >= timezone.now() - datetime.timedelta(days=1)
+
+    class Meta:
+        ordering = ['-rel_date', '-price']

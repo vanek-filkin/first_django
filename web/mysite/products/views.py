@@ -8,8 +8,12 @@ from django.views.generic import ListView,DetailView
 class ProductList(ListView):
     model = Product
     template_name = "products/index.html"
-    def order_by_date(seld):
+    def order_by_date(self):
         return Product.objects.order_by('-rel_date')
+
+    def get_context_data(self):
+        context = {"object_list": self.order_by_date}
+        return context
 
 # def index(request):
 #     new_prod_list = Product.objects.order_by('-rel_date')
